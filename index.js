@@ -13,7 +13,7 @@ const GAMES_JSON = JSON.parse(games)
 // remove all child elements from a parent element in the DOM which in this case is the games-container
 function deleteChildElements(gamesContainer) {
     while (gamesContainer.firstChild) {
-        gamesContainer.removeChild(parent.firstChild);
+        gamesContainer.removeChild(gamesContainer.firstChild);
     }
 }
 
