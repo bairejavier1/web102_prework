@@ -53,7 +53,7 @@ function addGamesToPage(games) {
 }
 
 // call the function we just defined using the correct variable
-// assuming you have a variable GAMES_JSON from JSON.parse(GAMES_DATA)
+// assuming you have a variable GAMES_JSON from JSON.parse(games)
 addGamesToPage(GAMES_JSON);
 
 // call the function we just defined using the correct variable
@@ -156,6 +156,7 @@ const unfundedGamesElement = document.createElement("p");
 unfundedGamesElement.innerHTML = unfundedGamesString;
 
 descriptionContainer.appendChild(unfundedGamesElement);
+
 /************************************************************************************
  * Challenge 7: Select & display the top 2 games
  * Skills used: spread operator, destructuring, template literals, sort 
@@ -164,12 +165,27 @@ descriptionContainer.appendChild(unfundedGamesElement);
 const firstGameContainer = document.getElementById("first-game");
 const secondGameContainer = document.getElementById("second-game");
 
-const sortedGames =  GAMES_JSON.sort( (item1, item2) => {
-    return item2.pledged - item1.pledged;
-});
+const sortedGames =  GAMES_JSON.sort( (firstGame, nextGame) => nextGame.pledged - firstGame.pledged);
 
 // use destructuring and the spread operator to grab the first and second games
+const [firstGame, secondGame] = [...sortedGames];
 
 // create a new element to hold the name of the top pledge game, then append it to the correct element
+const firstGameElement = document.createElement("p");
+firstGameElement.innerHTML = `${firstGame.name} has raised the most money!`;
 
 // do the same for the runner up item
+const secondGameElement = document.createElement("p");
+secondGameElement.innerHTML = `${secondGame.name} is the runner up!`;
+
+// append the elements to the correct containers
+firstGameContainer.appendChild(firstGameElement);
+secondGameContainer.appendChild(secondGameElement);
+
+// Displays the entire sortedGames array directly in the console. (This is optional and can be removed or moved if not needed as it is only for testing purposes)
+console.log(sortedGames);
+
+// Logs specific properties (like name and pledged), and the list is displayed in a sorted order, with the index counting from 1 (thanks to index + 1). (This is optional and can be removed or moved if not needed as it is only for testing purposes)
+sortedGames.forEach((game, index) =>
+    console.log(`${index + 1}. ${game.name} - $${game.pledged.toLocaleString()}`)
+  );
