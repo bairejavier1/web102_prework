@@ -146,16 +146,42 @@ allBtn.addEventListener("click", showAllGames);
 const descriptionContainer = document.getElementById("description-container");
 
 // use filter or reduce to count the number of unfunded games
-const unfundedGamesCount = GAMES_JSON.filter(game => game.pledged < game.goal).length;
-console.log("Unfunded games:", unfundedGamesCount); // 👈 This logs the count of unfunded games
+const unfundedGames = GAMES_JSON.filter(game => game.pledged < game.goal);
+
+// use the length property on the resulting array to get the number of unfunded games
+const unfundedGamesCount = unfundedGames.length;
+
+// log the number of unfunded games to the console
+// This is optional and can be removed or moved if not needed as it is only for testing purposes
+console.log("Unfunded games:", unfundedGamesCount); 
+
 // create a string that explains the number of unfunded games using the ternary operator
 const unfundedGamesString = `There ${unfundedGamesCount === 1 ? "is" : "are"} ${unfundedGamesCount} game${unfundedGamesCount === 1 ? "" : "s"} that are currently unfunded.`;
 
-// create a new DOM element containing the template string and append it to the description container
+// create a new DOM element containing the template string
 const unfundedGamesElement = document.createElement("p");
 unfundedGamesElement.innerHTML = unfundedGamesString;
 
+// append the new element to the description container
 descriptionContainer.appendChild(unfundedGamesElement);
+
+// Create a new paragraph with the additional information
+const totalGamesSummaryElement = document.createElement("p");
+
+// use reduce to calculate the total amount pledged for all games
+const totalPledgedRaised = GAMES_JSON.reduce((total, game) => total + game.pledged, 0);
+
+// calculate total games
+const totalGames = GAMES_JSON.length;
+
+totalGamesSummaryElement.innerHTML = `
+    A total of $${totalPledgedRaised.toLocaleString()} has been raised for ${totalGames} game${totalGames === 1 ? '' : 's'}. 
+    Currently, ${unfundedGamesCount} game${unfundedGamesCount === 1 ? '' : 's'} remain${unfundedGamesCount === 1 ? 's' : ''} unfunded.
+    We need your help to fund these amazing games!
+`;
+
+// Append the new paragraph to the description container
+descriptionContainer.appendChild(totalGamesSummaryElement);
 
 /************************************************************************************
  * Challenge 7: Select & display the top 2 games
