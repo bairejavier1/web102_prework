@@ -1,0 +1,119 @@
+"use strict";(self.webpackChunk_loomhq_web_client=self.webpackChunk_loomhq_web_client||[]).push([[9146],{1594:(e,n,t)=>{t.d(n,{s:()=>m});var a=t(8672),r=t(15068),l=t(74932),i=t(13116),o=t(76629),c=t(87501),s=t(26659);let d="auto-recording",m=({onSelect:e,selected:n,isDisabled:t=!1,source:m})=>{let g=(0,o.X)();return a.createElement("fieldset",null,a.createElement(r.zAb,{autoFlow:"row",gap:"large"},a.createElement(s.w,{name:d,onSelect:()=>{c.track(l.U_j,{source:m,type:"all"}),e(i.cg.All)},isSelected:n===i.cg.All,label:"All meetings",isDisabled:t}),a.createElement(s.w,{name:d,onSelect:()=>{c.track(l.U_j,{source:m,type:"internal"}),e(i.cg.Workspace)},isSelected:n===i.cg.Workspace,label:"Internal meetings",subLabel:g,isDisabled:t}),a.createElement(s.w,{name:d,onSelect:()=>{c.track(l.U_j,{source:m,type:"manual"}),e(i.cg.None)},isSelected:n===i.cg.None,label:"Manually-selected meetings",subLabel:"Select meetings you want to record after setup.",isDisabled:t})))}},4978:(e,n,t)=>{t.d(n,{p:()=>i});var a=t(17073),r=t(79515),l=t(8672);function i(e){return l.createElement(l.Fragment,null,l.createElement("svg",(0,a.k)((0,a.I)({viewBox:"0 0 24 24",fill:"none"},e),{className:"lens-legacy-icon"}),l.createElement("path",{d:"M21.62 10.26a3 3 0 00-2.12-.88h-4V5.62a3 3 0 00-4.34-2.68l-8 4A3 3 0 002 8a3 3 0 00-.5 1.62v8.76a3 3 0 00.88 2.13 3 3 0 002.12.87h15a3 3 0 002.12-.87 3 3 0 00.88-2.13v-6a3 3 0 00-.88-2.12zM4.5 19.38a1 1 0 01-.71-.29 1 1 0 01-.29-.71V9.62a1 1 0 01.15-.53 1.06 1.06 0 01.4-.36l8-4a1 1 0 01.5-.11 1 1 0 01.48.15 1 1 0 01.34.36 1 1 0 01.13.49v12.76a1 1 0 01-.29.71 1 1 0 01-.71.29zm16-1a1 1 0 01-.29.71 1 1 0 01-.71.29h-4v-8h4a1 1 0 011 1z",fill:"currentColor"}),l.createElement("path",{d:"M6.5 14.38a1 1 0 00-1 1 1 1 0 00.29.71 1 1 0 001.42 0 1 1 0 00.29-.71 1 1 0 00-1-1zM6.5 10.38a1 1 0 00-1 1 1 1 0 00.29.71 1 1 0 001.42 0 1 1 0 00.29-.71 1 1 0 00-1-1zM10.5 10.38a1 1 0 00-1 1 1 1 0 00.29.71 1 1 0 001.42 0 1 1 0 00.29-.71 1 1 0 00-1-1zM10.5 14.38a1 1 0 00-1 1 1 1 0 00.29.71 1 1 0 001.42 0 1 1 0 00.29-.71 1 1 0 00-1-1z",fill:"currentColor"})),l.createElement(r.A,{label:""}))}},5867:(e,n,t)=>{t.d(n,{sr:()=>r}),t(52962),t(8672),t(15068),t(4978),t(79778),t(45343);var a=t(13116);t(52789),t(94001);let r=e=>{let n=e?.me?.calendars??[],t=n.find(e=>e.integrationType===a.OP.Gcal),r=n.find(e=>e.integrationType===a.OP.MicrosoftGraph),l=n.flatMap(e=>e.meetings).sort((e,n)=>new Date(e?.startTime??0).getTime()-new Date(n?.startTime??0).getTime())||[],i=e?.me?.calendarAutomations||[],o=e?.me?.calendars?.[0]?.emailDomains??[];return{calendars:n,meetings:l,googleCalendar:t,microsoftOutlook:r,calendarAutomations:i,emailDomains:o}}},17828:(e,n,t)=>{t.d(n,{A:()=>l});var a=t(17073),r=t(8672);function l(e){return r.createElement("svg",(0,a.I)({viewBox:"0 0 24 24",fill:"none"},e),r.createElement("path",{d:"M14.2645 6.81636V10.3373L15.5085 11.112C15.5413 11.1215 15.6125 11.1222 15.6453 11.112L20.9993 7.54177C20.9993 7.11923 20.6008 6.81635 20.3759 6.81635H14.2645V6.81636Z",fill:"#0072C6"}),r.createElement("path",{d:"M14.2645 11.6508L15.3998 12.4222C15.5598 12.5385 15.7525 12.4222 15.7525 12.4222C15.5604 12.5385 21 8.96487 21 8.96487V15.4361C21 16.1405 20.544 16.436 20.0314 16.436H14.2638V11.6508H14.2645Z",fill:"#0072C6"}),r.createElement("path",{d:"M8.38623 10.0276C7.99935 10.0276 7.69108 10.2074 7.46347 10.5664C7.23585 10.9254 7.1217 11.4007 7.1217 11.9922C7.1217 12.5926 7.23585 13.0672 7.46347 13.416C7.69108 13.7655 7.98978 13.9393 8.35889 13.9393C8.73961 13.9393 9.04173 13.7696 9.26456 13.4302C9.48739 13.0908 9.59949 12.6196 9.59949 12.0173C9.59949 11.3892 9.49149 10.9004 9.27481 10.5509C9.05814 10.202 8.76217 10.0276 8.38623 10.0276Z",fill:"#0072C6"}),r.createElement("path",{d:"M3 5.02817V18.8028L13.5947 21V3L3 5.02817ZM10.0895 14.2442C9.64183 14.8269 9.0581 15.119 8.33766 15.119C7.63568 15.119 7.06425 14.8364 6.62201 14.2719C6.18045 13.7067 5.95899 12.9712 5.95899 12.0639C5.95899 11.1059 6.18319 10.3312 6.63226 9.7396C7.08134 9.14806 7.67601 8.85194 8.41627 8.85194C9.11552 8.85194 9.68148 9.13453 10.1128 9.70107C10.5448 10.2676 10.7608 11.014 10.7608 11.9408C10.7614 12.8934 10.5373 13.6614 10.0895 14.2442Z",fill:"#0072C6"}))}},26659:(e,n,t)=>{t.d(n,{w:()=>l});var a=t(8672),r=t(15068);let l=({onSelect:e,isSelected:n,label:t,subLabel:l,isDisabled:i=!1,name:o})=>a.createElement(r.mcf,{key:t},a.createElement(r.zBI,{direction:"row",label:a.createElement(r.mcf,null,a.createElement(r.EYj,{size:"body-md",fontWeight:"bold"},t),l?a.createElement(r.EYj,{size:"body-md",color:"bodyDimmed"},l):null),labelFor:t},a.createElement(r.W30,{alignment:"topCenter"},a.createElement(r.mcf,{paddingTop:"2px"},a.createElement(r.sxL,{onChange:e,id:t,isChecked:n,isDisabled:i,name:o})))))},32436:(e,n,t)=>{t.d(n,{C:()=>o});var a=t(5799),r=t(23604);let l={},i=(0,a.J1)`
+    mutation UpdateDefaultMeetingRecordingSettings($summaryNotification: MeetingRecordingSummaryNotificationType, $linkSharing: MeetingRecordingLinkSharingType, $workspaceMemberAccess: MeetingRecordingAccessType, $autoRecordOwnedMeetings: AutoRecordOwnedMeetingsType, $externalInviteeAccess: MeetingRecordingAccessType) {
+  updateDefaultMeetingRecordingSettings(
+    summaryNotification: $summaryNotification
+    linkSharing: $linkSharing
+    workspaceMemberAccess: $workspaceMemberAccess
+    autoRecordOwnedMeetings: $autoRecordOwnedMeetings
+    externalInviteeAccess: $externalInviteeAccess
+  ) {
+    __typename
+    ... on UpdateDefaultMeetingRecordingSettingsPayload {
+      success
+      meetingRecordingSettings {
+        id
+        recordingLinkSharing
+        recordingWorkspaceMemberAccess
+        recordingSummaryNotificationSetting
+        autoRecordOwnedMeetings
+        externalInviteeAccess
+      }
+    }
+    ... on GenericError {
+      message
+    }
+  }
+}
+    `;function o(e){let n={...l,...e};return r.n(i,n)}},42360:(e,n,t)=>{t.d(n,{C:()=>h,w:()=>E});var a=t(8672),r=t(15068),l=t(31962),i=t(86224),o=t(46153),c=t(42579),s=t(13116),d=t(68225),m=t(80916),g=t(95780),u=t(45585);let C=(e,n)=>"branded-neutral"===e?"neutral":"branded-primary"===e?"primary":"neutral"===e?n?"danger":"neutral":"primary"===e?n?"neutral":"primary":"neutral",p=e=>e.indexOf("branded")>=0,f=e=>a.createElement("svg",{viewBox:"0 0 24 24",fill:"none",...e},a.createElement("path",{fillRule:"evenodd",clipRule:"evenodd",d:"M20.64 12.2044C20.64 11.5663 20.5827 10.9526 20.4764 10.3635H12V13.8449H16.8436C16.635 14.9699 16.0009 15.9231 15.0477 16.5613V18.8194H17.9564C19.6582 17.2526 20.64 14.9453 20.64 12.2044Z",fill:"#ffffff"}),a.createElement("path",{fillRule:"evenodd",clipRule:"evenodd",d:"M12 21C14.43 21 16.4673 20.1941 17.9564 18.8195L15.0477 16.5613C14.2418 17.1013 13.2109 17.4204 12 17.4204C9.656 17.4204 7.6718 15.8372 6.964 13.71H3.9574V16.0418C5.4382 18.9831 8.4818 21 12 21Z",fill:"#ffffff"}),a.createElement("path",{fillRule:"evenodd",clipRule:"evenodd",d:"M6.964 13.7101C6.784 13.1701 6.6818 12.5932 6.6818 12.0001C6.6818 11.4069 6.7841 10.8301 6.9641 10.2901V7.95819H3.9573C3.32728 9.21237 2.99945 10.5966 3 12.0001C3 13.4523 3.3477 14.8269 3.9573 16.0419L6.9641 13.7101H6.964Z",fill:"#ffffff"}),a.createElement("path",{fillRule:"evenodd",clipRule:"evenodd",d:"M12 6.5795C13.3214 6.5795 14.5077 7.0336 15.4405 7.9255L18.0218 5.3441C16.4632 3.8918 14.4259 3 12 3C8.48178 3 5.43818 5.0168 3.95728 7.9582L6.96398 10.29C7.67178 8.1627 9.65588 6.5795 12 6.5795Z",fill:"#ffffff"})),h=({handleCalendarConnectionChange:e,handleClick:n,shouldRedirect:t,shouldRedirectToSetup:h,variant:y="branded-neutral",size:E="medium",hasFullWidth:v=!1})=>{let{showErrorBar:b}=(0,o.Nl)(),{shouldDisableLegacyZoomIntegration:M,shouldDisableLegacyZoomIntegrationLoading:w}=(0,g.Zi)(),{completeChecklistItem:S}=(0,d.s)(s.eM.MeetingRecording),k=(0,g._j)(),{googleCalendarConnected:A}=(0,g.WH)(),R=()=>{(0,m.AE)("google-calendar",{},n=>{n.error?b({message:n.error,severity:c.MI.ERROR}):(S(),e?.(!0),M&&k(),t&&(window.location.href="/meetings?showSettings=1"),h&&(window.location.href="/meetings/setup"))})},[O]=(0,u.N)({variables:{integrationType:i.b.GOOGLE_CALENDAR},onCompleted:n=>{n.disconnectCalendar?.__typename==="DisconnectCalendarPayload"&&n.disconnectCalendar.success&&(e?.(!1),L(!0))}}),D=()=>{O()},[I,L]=(0,a.useState)(!1),T=C(y,A),$=p(y);return w?null:a.createElement(a.Fragment,null,a.createElement(r.y8,{isOpen:I,onCloseClick:()=>L(!1),duration:"long"},a.createElement(r.zAb,{alignItems:"start",gap:"small"},a.createElement(r.EYj,null,"Google Calendar has been disconnected."))),a.createElement(r.$nd,{size:E,variant:T,icon:!A&&$?a.createElement(r.Int,{icon:"branded-primary"===y?a.createElement(f,null):a.createElement(l.G,null)}):null,onClick:()=>{A?D():R(),n&&n()},hasFullWidth:v},A?"Disconnect":$?"Connect Google Calendar":"Connect"))};var y=t(17828);let E=({handleCalendarConnectionChange:e,handleClick:n,shouldRedirect:t,shouldRedirectToSetup:l=!1,variant:f="branded-neutral",size:h="medium",hasFullWidth:E=!1})=>{let{showErrorBar:v}=(0,o.Nl)(),{shouldDisableLegacyZoomIntegration:b,shouldDisableLegacyZoomIntegrationLoading:M}=(0,g.Zi)(),{completeChecklistItem:w}=(0,d.s)(s.eM.MeetingRecording),S=(0,g._j)(),{microsoftOutlookConnected:k}=(0,g.WH)(),A=()=>{(0,m.AE)("microsoft-outlook",{},n=>{n.error?v({message:n.error,severity:c.MI.ERROR}):(w(),b&&S(),e?.(!0),t&&(window.location.href="/calendar?showSettings=1"),l&&(window.location.href="/meetings/setup"))})},[R]=(0,u.N)({variables:{integrationType:i.b.MICROSOFT_OUTLOOK},onCompleted:n=>{n.disconnectCalendar?.__typename==="DisconnectCalendarPayload"&&n.disconnectCalendar.success&&(e?.(!1),I(!0))}}),O=()=>{R()},[D,I]=(0,a.useState)(!1),L=C(f,k),T=p(f);return M?null:a.createElement(a.Fragment,null,a.createElement(r.y8,{isOpen:D,onCloseClick:()=>I(!1),duration:"long"},a.createElement(r.zAb,{alignItems:"start",gap:"small"},a.createElement(r.EYj,null,"Microsoft Outlook has been disconnected."))),a.createElement(r.$nd,{size:h,variant:L,icon:!k&&T?a.createElement(y.A,null):null,onClick:()=>{k?O():A(),n&&n()},hasFullWidth:E},k?"Disconnect":T?"Connect Outlook Calendar":"Connect"))}},45343:(e,n,t)=>{t.d(n,{r:()=>i});var a=t(17073),r=t(78837),l=t(8672);function i(e){return l.createElement(l.Fragment,null,l.createElement("svg",(0,a.k)((0,a.I)({viewBox:"0 0 24 24",fill:"none"},e),{className:"lens-legacy-icon"}),l.createElement("path",{clipRule:"evenodd",d:"M9.72293 5.3787C7.27884 6.21905 5.44643 8.37454 5.07089 11H7.85692C8.04703 9.00285 8.688 7.08165 9.72293 5.3787ZM14.277 5.37869C15.312 7.08164 15.953 9.00285 16.1431 11H18.9291C18.5536 8.37453 16.7211 6.21903 14.277 5.37869ZM14.1324 11C13.9115 9.03394 13.1754 7.16119 12 5.57179C10.8246 7.16119 10.0884 9.03394 9.86759 11H14.1324ZM9.86759 13H14.1324C13.9115 14.9661 13.1754 16.8388 12 18.4282C10.8246 16.8388 10.0884 14.9661 9.86759 13ZM7.85692 13H5.07089C5.44643 15.6255 7.27884 17.781 9.72293 18.6213C8.68801 16.9184 8.04703 14.9971 7.85692 13ZM14.277 18.6213C15.312 16.9184 15.953 14.9971 16.1431 13H18.9291C18.5536 15.6255 16.7211 17.781 14.277 18.6213ZM12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z",fill:"currentColor",fillRule:"evenodd"})),l.createElement(r.A,{label:""}))}},45585:(e,n,t)=>{t.d(n,{N:()=>o});var a=t(5799),r=t(23604);let l={},i=(0,a.J1)`
+    mutation DisconnectCalendar($integrationType: String!) {
+  disconnectCalendar(integrationType: $integrationType) {
+    __typename
+    ... on DisconnectCalendarPayload {
+      success
+    }
+  }
+}
+    `;function o(e){let n={...l,...e};return r.n(i,n)}},52789:(e,n,t)=>{t.d(n,{iM:()=>o});var a=t(5799),r=t(90623);let l={},i=(0,a.J1)`
+    query GetCalendarMeetings($rangeStart: String!, $rangeEnd: String!) {
+  me {
+    id
+    meetingRecordingSettings {
+      id
+      recordingLinkSharing
+      recordingWorkspaceMemberAccess
+      recordingSummaryNotificationSetting
+      autoRecordOwnedMeetings
+    }
+    calendars {
+      id
+      integrationType
+      lastSyncedAt
+      emailDomains
+      meetings(rangeStart: $rangeStart, rangeEnd: $rangeEnd) {
+        id
+        meetingAri
+        recurringMeetingAri
+        title
+        description
+        platform
+        url
+        code
+        organizer {
+          id
+          first_name
+          last_name
+          email
+          avatars {
+            thumb
+          }
+        }
+        recorder {
+          id
+          first_name
+          last_name
+          email
+          avatars {
+            thumb
+          }
+        }
+        organizerEmail
+        startTime
+        durationMins
+        createdAt
+        updatedAt
+        recurring
+        hasExternalParticipants
+        automationsOverridden
+        owned
+        record
+        past
+        video {
+          id
+        }
+        recordingLinkSharing
+        recordingWorkspaceMemberAccess
+        recordingSummaryNotificationSetting
+        recordingFolders {
+          id
+          name
+        }
+        recordingSpaces {
+          id
+          name
+        }
+        calendarMeetingId
+      }
+    }
+    calendarAutomations {
+      id
+      enabled
+      name
+      recordingLinkSharing
+      recordingSummaryNotificationSetting
+      recordingWorkspaceMemberAccess
+    }
+  }
+}
+    `;function o(e){let n={...l,...e};return r.I(i,n)}},55223:(e,n,t)=>{t.d(n,{K:()=>r});var a=t(76632);let r=(e,n=30)=>{let t=a.c9.now(),r=t.setZone(e).startOf("day").toString(),l=t.setZone(e).plus({days:n}).startOf("day").toString();return{rangeStart:r,rangeEnd:l}}},61507:(e,n,t)=>{t.d(n,{v:()=>r});var a=t(13116);let r=e=>{switch(e){case a.G.Everyone:return{workspaceMemberAccess:a.tx.CanView,externalInviteeAccess:a.tx.CanView,summaryNotification:a.G.Everyone};case a.G.InternalOnly:return{workspaceMemberAccess:a.tx.CanView,externalInviteeAccess:a.tx.Disabled,summaryNotification:a.G.InternalOnly};case a.G.RecorderOnly:case a.G.Disabled:return{workspaceMemberAccess:a.tx.Disabled,externalInviteeAccess:a.tx.Disabled,summaryNotification:a.G.RecorderOnly};default:throw Error("Invalid MeetingRecordingSummaryNotificationType")}}},76629:(e,n,t)=>{t.d(n,{X:()=>c});var a=t(55223),r=t(52962),l=t(52789),i=t(5867);let o=()=>{let{timeZone:e}=Intl.DateTimeFormat().resolvedOptions(),{rangeStart:n,rangeEnd:t}=(0,a.K)(e,0),{data:r}=(0,l.iM)({variables:{rangeStart:n,rangeEnd:t},fetchPolicy:"cache-and-network",nextFetchPolicy:"cache-first"}),{emailDomains:o}=(0,i.sr)(r);return o},c=({isTooltip:e=!1}={})=>{let n=o(),t=(0,r.Ei)(),a=n.map(e=>`@${e}`).join(","),l=t.name?` ${t.name}`:"",i=a?`or have an
+          ${a} email`:"";return`${e?"Meetings you own, where all":"All"} invitees are in the${l} workspace ${i}${e?"":"."}`}},94001:(e,n,t)=>{t.d(n,{Mm:()=>l,Y8:()=>r});var a=t(13116);a.hl.OnlyPeopleAdded,a.hl.Workspace,a.hl.Anyone;let r={[a.G.Everyone]:{title:"All meeting invitees"},[a.G.InternalOnly]:{title:"Only internal invitees"},[a.G.RecorderOnly]:{title:"Just me"}},l=e=>({[a.hl.Anyone]:{title:"Public"},[a.hl.Workspace]:{title:`${e} workspace`,altTitle:"Workspace"},[a.hl.OnlyPeopleAdded]:{title:"Private"}})}}]);
+//# sourceMappingURL=https://www.loom.com/admin/sourcemaps/js/9146-62696457fa232cfac517.js.map
